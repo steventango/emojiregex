@@ -7,7 +7,11 @@ EmojiRejex() generates a regular expression based on the data from Unicode Techn
 Browser:
 
 ```html
-<script src="emojiregex.js"></script>``` or ```<script src="emojiregex.min.js"></script>
+<script src="emojiregex.js"></script>
+```
+or 
+```html
+<script src="emojiregex.min.js"></script>
 ```
 
 #Usage:
