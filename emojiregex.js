@@ -14,7 +14,7 @@ function emojiRegex() {
         }
     }
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "http://www.unicode.org/Public/emoji/latest/emoji-data.txt", false);
+    rawFile.open("GET", "https://31e7928180bdcb372167bf95d59adf8333a5c2b6.googledrive.com/host/0B9Tx83SPVgPNZjlHeHJEQVZOa0U/emoji-data.txt", false);
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status === 0) {
