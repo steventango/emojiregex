@@ -1,4 +1,4 @@
-function emojiRegex(option) {
+function emojiRegex() {
     var regex, pattern = '',
         unicode = [];
 
@@ -28,9 +28,7 @@ function emojiRegex(option) {
                     unicode[i] = unicode[i].trim();
                 }
                 console.log(unicode);
-                if (option === 1) {
-                    pattern += '(?:\\u0023|\\u002A|[\\u0030-\\u0039])';//Disincludes NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9)
-                }
+                pattern += '(?:\\u0023|\\u002A|[\\u0030-\\u0039])'; //Disincludes NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9)
                 for (i = 0; i < unicode.length; i++) {
                     if (unicode[i].length === 4) {
                         pattern += '\\u' + unicode[i];
