@@ -28,5 +28,5 @@ regex.test('A');
 //false
 regex.test('1');
 //false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
-//they are disincluded. To include NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) comment out line 31 of emojiregex.js
+//they are disincluded. To include (#), (*), (0-9) comment out line 31 of emojiregex.js
 ```
