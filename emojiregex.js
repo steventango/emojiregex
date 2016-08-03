@@ -13,12 +13,12 @@ function emojiRegex() {
             return false;
         }
     }
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "https://31e7928180bdcb372167bf95d59adf8333a5c2b6.googledrive.com/host/0B9Tx83SPVgPNZjlHeHJEQVZOa0U/emoji-data.txt", false);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status === 0) {
-                var allText = rawFile.responseText;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://31e7928180bdcb372167bf95d59adf8333a5c2b6.googledrive.com/host/0B9Tx83SPVgPNZjlHeHJEQVZOa0U/emoji-data.txt", false); //file is updated daily from www.unicode.org/Public/emoji/latest/emoji-data.txt with google apps script. The reason this is done is because many browsers do not allow a http request on a https site.
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200 || xhr.status === 0) {
+                var allText = xhr.responseText;
                 allText = allText.replace(/^#.*?\n/gm, '');
                 allText = allText.replace(/;.*?\n/gm, '||');
                 allText = allText.replace(/\n/gm, '');
@@ -51,6 +51,6 @@ function emojiRegex() {
             }
         }
     };
-    rawFile.send();
+    xhr.send();
     return regex;
 }
