@@ -16,7 +16,7 @@ or
   ```js
 var regex = emojiRegex();
 //returns regex
-regex.test('😂')
+regex.test('😂');
 //true
 regex.test('💩');
 //true
