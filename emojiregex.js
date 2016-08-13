@@ -14,7 +14,7 @@ var emojiRegex;
     var workercode = new Blob(['(',
         self.onmessage = function() {
             var rawFile = new XMLHttpRequest();
-            rawFile.open("GET", "https://31e7928180bdcb372167bf95d59adf8333a5c2b6.googledrive.com/host/0B9Tx83SPVgPNZjlHeHJEQVZOa0U/emoji-data.txt", false);//file is updated weekly from www.unicode.org/Public/emoji/latest/emoji-data.txt with google apps script. The reason this is done is because many browsers do not allow a http request on a https site.
+            rawFile.open("GET", "https://31e7928180bdcb372167bf95d59adf8333a5c2b6.googledrive.com/host/0B9Tx83SPVgPNZjlHeHJEQVZOa0U/emoji-data.txt", false); //file is updated weekly from www.unicode.org/Public/emoji/latest/emoji-data.txt with google apps script. The reason this is done is because many browsers do not allow a http request on a https site.
             rawFile.onreadystatechange = function() {
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status === 0) {
@@ -40,7 +40,6 @@ var emojiRegex;
         for (var i = 0; i < unicode.length; i++) {
             unicode[i] = unicode[i].trim();
         }
-        pattern += '(?:\\u0023|\\u002A|[\\u0030-\\u0039])'; //Disincludes NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9)
         for (i = 0; i < unicode.length; i++) {
             if (unicode[i].length === 4) {
                 pattern += '\\u' + unicode[i];
@@ -60,6 +59,8 @@ var emojiRegex;
                 pattern += '|';
             }
         }
+		//Disincludes NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9)
+		pattern = pattern.replace('\\u0023|\\u002A|[\\u0030-\\u0039]|','');
         regex = new RegExp(pattern, 'gmi');
         emojiRegex = function() {
             return regex;
