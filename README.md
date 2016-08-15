@@ -14,7 +14,8 @@ or
 
 #Usage:
   ```js
-var regex = emojiRegex();
+var flags = 'gmi'
+var regex = emojiRegex(flags);
 //returns regex
 regex.test('😂');
 //true
