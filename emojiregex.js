@@ -61,8 +61,8 @@ var emojiRegex;
         }
 		//Disincludes NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9)
 		pattern = pattern.replace('\\u0023|\\u002A|[\\u0030-\\u0039]|','');
-        regex = new RegExp(pattern, 'gmi');
-        emojiRegex = function() {
+        emojiRegex = function(flags) {
+			regex = new RegExp(pattern, flags);
             return regex;
         };
     };
