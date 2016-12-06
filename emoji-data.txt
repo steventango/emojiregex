@@ -1,11 +1,11 @@
 # emoji-data.txt
-# Date: 2016-09-16, 20:01:59 GMT
+# Date: 2016-11-20, 23:57:54 GMT
 # © 2016 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use, see http://www.unicode.org/terms_of_use.html
 #
 # Emoji Data for UTR #51
-# Version: 4.0
+# Version: 5.0
 #
 # For documentation and usage, see http://www.unicode.org/reports/tr51
 #
@@ -381,7 +381,9 @@
 1F3CB..1F3CC  ; Emoji_Modifier_Base  # 7.0  [2] (🏋️..🏌️)    person lifting weights..person golfing
 1F442..1F443  ; Emoji_Modifier_Base  # 6.0  [2] (👂..👃)    ear..nose
 1F446..1F450  ; Emoji_Modifier_Base  # 6.0 [11] (👆..👐)    backhand index pointing up..open hands
-1F466..1F478  ; Emoji_Modifier_Base  # 6.0 [19] (👦..👸)    boy..princess
+1F466..1F469  ; Emoji_Modifier_Base  # 6.0  [4] (👦..👩)    boy..woman
+1F46E         ; Emoji_Modifier_Base  # 6.0  [1] (👮)       police officer
+1F470..1F478  ; Emoji_Modifier_Base  # 6.0  [9] (👰..👸)    bride with veil..princess
 1F47C         ; Emoji_Modifier_Base  # 6.0  [1] (👼)       baby angel
 1F481..1F483  ; Emoji_Modifier_Base  # 6.0  [3] (💁..💃)    person tipping hand..woman dancing
 1F485..1F487  ; Emoji_Modifier_Base  # 6.0  [3] (💅..💇)    nail polish..person getting haircut
@@ -397,12 +399,13 @@
 1F6C0         ; Emoji_Modifier_Base  # 6.0  [1] (🛀)       person taking bath
 1F6CC         ; Emoji_Modifier_Base  # 7.0  [1] (🛌)       person in bed
 1F918         ; Emoji_Modifier_Base  # 8.0  [1] (🤘)       sign of the horns
-1F919..1F91E  ; Emoji_Modifier_Base  # 9.0  [6] (🤙..🤞)    call me hand..crossed fingers
+1F919..1F91C  ; Emoji_Modifier_Base  # 9.0  [4] (🤙..🤜)    call me hand..right-facing fist
+1F91E         ; Emoji_Modifier_Base  # 9.0  [1] (🤞)       crossed fingers
 1F926         ; Emoji_Modifier_Base  # 9.0  [1] (🤦)       person facepalming
 1F930         ; Emoji_Modifier_Base  # 9.0  [1] (🤰)       pregnant woman
 1F933..1F939  ; Emoji_Modifier_Base  # 9.0  [7] (🤳..🤹)    selfie..person juggling
-1F93C..1F93E  ; Emoji_Modifier_Base  # 9.0  [3] (🤼..🤾)    people wrestling..person playing handball
+1F93D..1F93E  ; Emoji_Modifier_Base  # 9.0  [2] (🤽..🤾)    person playing water polo..person playing handball
 
-# Total elements: 93
+# Total elements: 86
 
 #EOF
