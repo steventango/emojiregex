@@ -14,7 +14,7 @@ var emojiRegex;
     var workercode = new Blob(['(',
         self.onmessage = function() {
             var rawFile = new XMLHttpRequest();
-            rawFile.open("GET", "https://raw.githubusercontent.com/StevenTang166/EmojiRegex/master/emoji-data.txt", false); //file is updated manually from www.unicode.org/Public/emoji/latest/emoji-data.txt with google apps script. The reason this is done is because many browsers do not allow a http request on a https site.
+            rawFile.open("GET", "https://httpsify.xeodou.me/url?redirect=http://www.unicode.org/Public/emoji/latest/emoji-data.txt", false); //file is updated manually from www.unicode.org/Public/emoji/latest/emoji-data.txt with google apps script. The reason this is done is because many browsers do not allow a http request on a https site.
             rawFile.onreadystatechange = function() {
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status === 0) {
