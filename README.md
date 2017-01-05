@@ -1,6 +1,6 @@
 # EmojiRegex
 
-EmojiRejex generates a regular expression based on the data from [Unicode Technical Report #51](http://unicode.org/Public/emoji/latest/emoji-data.txt). Because of this, it is easy to update the regular expression, whenever new emoji are added to the Unicode standard.
+EmojiRejex generates a regular expression based on the data from [Unicode Technical Report #51](http://unicode.org/Public/emoji/latest/emoji-data.txt). EmojiRegex also uses [httpsify](https://httpsify.xeodou.me/), which allows it to convert unicode's non-https page to a https page. Thus, EmojiRegex will always be up to date, and no human interaction is required to update it.
 
 #Installation:
 
