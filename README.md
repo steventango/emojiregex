@@ -23,8 +23,7 @@ emojiRegex()
     regex.test('1');
     regex.test('#');
     regex.test('*');
-    //false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
-    //they are excluded. To include (#), (*), (0-9) comment out line 25 of emojiregex.js
+    //false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard, they are excluded. To include (#), (*), (0-9) comment out line 25 of emojiregex.js
  }) //returns a Promise that returns a RegExp object
 
 ```
