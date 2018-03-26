@@ -25,5 +25,6 @@ emojiRegex.then(regex => {
     //false
     //NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
     //however they have been excluded. To include (#), (*), (0-9) delete line 26 of emojiregex.js
- }) //a Promise that returns a RegExp object
+ })
+ //emojiRegex is a Promise that returns a RegExp object
 ```
