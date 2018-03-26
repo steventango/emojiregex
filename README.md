@@ -1,6 +1,6 @@
 # EmojiRegex
 
-EmojiRejex asynchronously generates a regular expression for Emoji. At runtime the regex is generated from the latest [Unicode Technical Report #51](http://unicode.org/Public/emoji/latest/emoji-data.txt) data. EmojiRegex uses [httpsify](https://httpsify.xeodou.me/) to bypass Mixed Content blocking. Therefore, EmojiRegex will always match the most up to date Emojis. 😊
+EmojiRejex asynchronously generates a regular expression for Emoji. The regex is generated at runtime from the latest [Unicode Technical Report #51](http://unicode.org/Public/emoji/latest/emoji-data.txt) data. EmojiRegex uses [httpsify](https://httpsify.xeodou.me/) to bypass Mixed Content blocking. Therefore, EmojiRegex will always match the most up to date Emojis. 😊
 
 ## Installation
 
