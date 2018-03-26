@@ -1,16 +1,15 @@
 # EmojiRegex
 
-EmojiRejex generates a regular expression based on the data from [Unicode Technical Report #51](http://unicode.org/Public/emoji/latest/emoji-data.txt). EmojiRegex also uses [httpsify](https://httpsify.xeodou.me/), which allows it to convert unicode's non-https page to a https page. Thus, EmojiRegex will always be up to date, and no human interaction is required to update it.
+EmojiRejex asynchronously generates a regular expression for Emoji. At runtime the regex is generated from the latest [Unicode Technical Report #51](http://unicode.org/Public/emoji/latest/emoji-data.txt) data. EmojiRegex uses [httpsify](https://httpsify.xeodou.me/) to bypass Mixed Content blocking. Therefore, EmojiRegex will always match the most up to date Emojis. 😊
 
-#Installation:
+## Installation
 
 ```html
 <script src="emojiregex.min.js"></script>
 ```
 
-#Usage:
+## Usage
   ```js
-var flags = 'gmi'
 emojiRegex()
   .then(regex => {
     regex(flags).test('😂');
@@ -25,7 +24,7 @@ emojiRegex()
     regex(flags).test('#');
     regex(flags).test('*');
     //false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
-    //they are excluded. To include (#), (*), (0-9) comment out line 63 of emojiregex.js
- }) //returns a Promise with a value that is a Function that returns a Regex.
+    //they are excluded. To include (#), (*), (0-9) comment out line 25 of emojiregex.js
+ }) //returns a Promise that returns a RegExp object
 
 ```
