@@ -12,17 +12,17 @@ EmojiRejex asynchronously generates a regular expression for Emoji. At runtime t
   ```js
 emojiRegex()
   .then(regex => {
-    regex(flags).test('😂');
+    regex.test('😂');
     //true
-    regex(flags).test('💩');
+    regex.test('💩');
     //true
-    regex(flags).test('🇨🇦');
+    regex.test('🇨🇦');
     //true
-    regex(flags).test('A');
+    regex.test('A');
     //false
-    regex(flags).test('1');
-    regex(flags).test('#');
-    regex(flags).test('*');
+    regex.test('1');
+    regex.test('#');
+    regex.test('*');
     //false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
     //they are excluded. To include (#), (*), (0-9) comment out line 25 of emojiregex.js
  }) //returns a Promise that returns a RegExp object
