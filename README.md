@@ -5,29 +5,27 @@ EmojiRejex generates a regular expression based on the data from [Unicode Techni
 #Installation:
 
 ```html
-<script src="emojiregex.js"></script>
-```
-or 
-```html
 <script src="emojiregex.min.js"></script>
 ```
 
 #Usage:
   ```js
 var flags = 'gmi'
-var regex = emojiRegex(flags);
-//returns regex
-regex.test('😂');
-//true
-regex.test('💩');
-//true
-regex.test('🇨🇦');
-//true
-regex.test('A');
-//false
-regex.test('1');
-regex.test('#');
-regex.test('*');
-//false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
-//they are excluded. To include (#), (*), (0-9) comment out line 63 of emojiregex.js
+emojiRegex()
+  .then(regex => {
+    regex(flags).test('😂');
+    //true
+    regex(flags).test('💩');
+    //true
+    regex(flags).test('🇨🇦');
+    //true
+    regex(flags).test('A');
+    //false
+    regex(flags).test('1');
+    regex(flags).test('#');
+    regex(flags).test('*');
+    //false, even though NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
+    //they are excluded. To include (#), (*), (0-9) comment out line 63 of emojiregex.js
+ }) //returns a Promise with a value that is a Function that returns a Regex.
+
 ```
