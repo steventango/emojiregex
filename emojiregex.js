@@ -1,9 +1,8 @@
-var emojiRegex = fetch('https://httpsify.xeodou.me/url?redirect=http://www.unicode.org/Public/emoji/latest/emoji-data.txt') //bypass Mixed Content
+const emojiRegex = fetch('https://httpsify.xeodou.me/url?redirect=http://www.unicode.org/Public/emoji/latest/emoji-data.txt') //bypass Mixed Content
   .then(response => response.text())
   .then(data => {
-    var pattern = '';
-    data = data.replace(/^#.*?\n/gm, '').replace(/;.*?\n/gm, '||').replace(/\n/gm, '');
-    var unicode = data.split('||');
+    let pattern = '';
+    const unicode = data.replace(/^#.*?\n/gm, '').replace(/;.*?\n/gm, '||').replace(/\n/gm, '').split('||');
     unicode.pop();
     unicode.forEach((code, index) => {
       code = code.trim();
