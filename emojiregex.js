@@ -1,4 +1,4 @@
-const emojiRegex = fetch('https://httpsify.xeodou.me/url?redirect=http://www.unicode.org/Public/emoji/latest/emoji-data.txt') //bypass Mixed Content
+const emojiRegex = fetch('https://www.unicode.org/Public/emoji/latest/emoji-data.txt')
   .then(response => response.text())
   .then(data => {
     let pattern = [];
