@@ -12,19 +12,23 @@ EmojiRejex asynchronously generates a regular expression for Emoji. The regex is
   ```js
 emojiRegex.then(regex => {
     regex.test('😂');
-    //true
+    // true
     regex.test('💩');
-    //true
+    // true
     regex.test('🇨🇦');
-    //true
+    // true
     regex.test('A');
-    //false
+    // false
     regex.test('1');
     regex.test('#');
     regex.test('*');
-    //false
-    //NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
-    //however they have been excluded. To include (#), (*), (0-9) delete line 26 of emojiregex.js
+    // false
+    // NUMBER SIGN(#), ASTERISK(*), and DIGIT ZERO..DIGIT NINE(0-9) are part of the standard,
+    // however they have been excluded. To include (#), (*), (0-9) delete line 26 of emojiregex.js
  })
- //emojiRegex is a Promise that returns a RegExp object
+ // emojiRegex is a Promise that returns a RegExp object
+ 
+ // Alternatively, you can use async-await syntax.
+ const regex = await emojiRegex().test('🤪')
+ // true
 ```
