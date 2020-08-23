@@ -29,6 +29,7 @@ emojiRegex.then(regex => {
  // emojiRegex is a Promise that returns a RegExp object
  
  // Alternatively, you can use async-await syntax.
- const regex = await emojiRegex().test('🤪')
+ const regex = await emojiRegex;
+ regex.test('🤪')
  // true
 ```
