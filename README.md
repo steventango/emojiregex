@@ -30,6 +30,6 @@ emojiRegex.then(regex => {
  
  // Alternatively, you can use async-await syntax.
  const regex = await emojiRegex;
- regex.test('🤪')
+ regex.test('🤪');
  // true
 ```
