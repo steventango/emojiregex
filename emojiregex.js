@@ -1,4 +1,4 @@
-const emojiRegex = fetch('https://raw.githubusercontent.com/steventango/emojiregex/master/emoji-data.txt')
+const emojiRegex = fetch('https://steventango.github.io/emojiregex/master/emoji-data.txt')
   .then(response => response.text())
   .then(data => {
     let pattern = [];
