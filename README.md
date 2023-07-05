@@ -1,6 +1,6 @@
 # EmojiRegex
 
-EmojiRejex asynchronously generates a regular expression for Emoji. The regex is generated at runtime from the latest [Unicode Technical Standard #51](https://www.unicode.org/Public/UCD/latest/ucd/emoji/emoji-data.txt) data. EmojiRegex uses [cors-anywhere](https://github.com/Rob--W/cors-anywhere) to bypass CORS restrictions. Therefore, EmojiRegex will always be up to date. 😊
+EmojiRejex asynchronously generates a regular expression for Emoji. The regex is generated at runtime from the latest [Unicode Technical Standard #51](https://www.unicode.org/Public/UCD/latest/ucd/emoji/emoji-data.txt) data. EmojiRegex is no longer maintained, consider using [emoji-regex](https://github.com/mathiasbynens/emoji-regex) instead.
 
 ## Installation
 
