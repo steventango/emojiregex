@@ -1,8 +1,4 @@
-const emojiRegex = fetch('https://cors-anywhere.herokuapp.com/https://www.unicode.org/Public/UCD/latest/ucd/emoji/emoji-data.txt', { //cors-anywhere allows us to bypass CORS restricitons
-  headers: {
-    origin: location.origin
-  }
-})
+const emojiRegex = fetch('https://raw.githubusercontent.com/steventango/emojiregex/master/emoji-data.txt')
   .then(response => response.text())
   .then(data => {
     let pattern = [];
